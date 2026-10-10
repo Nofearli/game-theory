@@ -1,0 +1,41 @@
+name: tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy matplotlib
+
+      - name: Run invariant tests
+        run: python tests/run_tests.py
+
+      - name: Smoke-run the examples (figures to /tmp)
+        run: |
+          cd examples
+          for f in pursuit-evasion/apollonius_1v1.py \
+                   barrier/barrier_1v1.py \
+                   partial-observation/partial_info_1v1.py \
+                   multi-agent/assignment_mvn.py \
+                   tad/tad_optimal.py \
+                   learning-games/pursuit_evasion_env.py; do
+            echo "=== $f ==="
+            python "$f"
+          done
