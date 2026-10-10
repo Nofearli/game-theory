@@ -161,6 +161,13 @@ NumPy/SciPy, no plotting imports), and a runnable demo in `examples/`.
 unproven statements as conjecture / numerical observation; never present a heuristic as a
 differential-game optimum or a simulation as a proof.
 
+## License
+
+MIT — see [`LICENSE`](LICENSE). Anyone may download, use, modify and redistribute this skill.
+
+The bundled tutorial book 《博弈书籍.md》 (`assets/book/`) is the author's own writing; the
+research papers it summarises remain the property of their respective authors.
+
 ## Acceptance tasks
 
 The skill is designed to handle: (1) 1v1 interception judgement; (2) non-zero capture-radius

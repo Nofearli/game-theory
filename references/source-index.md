@@ -7,9 +7,8 @@ game-theory/assets/book/博弈书籍.md      ← read this one
 game-theory/assets/book/fig/             ← its 60 figures
 ```
 
-An external working copy may also exist at
-`D:/system/zhuomian/新建文件夹/博弈内容整理 -wb/整理/博弈书籍/博弈书籍.md` — prefer the
-bundled copy so the skill never depends on another folder.
+An external working copy may also exist elsewhere on your machine — prefer the **bundled**
+copy above, so the skill never depends on another folder.
 
 > Line numbers below are from the book as of **2026-10-10** (6,110 lines). They drift if the
 > book is regenerated — **always resolve by section number first**, then jump to the line.
