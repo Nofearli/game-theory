@@ -10,7 +10,7 @@ for research, coding, simulation and IEEE/AAAI paper writing.
 - **Knowledge:** `references/` (theory, research, writing, simulation, coding, RL, notation,
   pitfalls, source index).
 - **Working code:** `scripts/gtlib/` (reusable library) + `examples/` (7 runnable examples).
-- **Verification:** `tests/` (32 checks of mathematical invariants).
+- **Verification:** `tests/` (37 checks of mathematical invariants).
 
 ## Install
 

@@ -35,7 +35,9 @@ def test_reflection_optimal_boundary_point_is_collinear():
     x_I = A_ref + t * (G - A_ref)
     assert abs(x_I[0] - l) < 1e-9
     # collinear => cross product ~ 0
-    cross = np.cross(G - A_ref, x_I - A_ref)
+    # NB: use an explicit 2-D cross; np.cross dropped 2-D support in NumPy 2.
+    u, v = G - A_ref, x_I - A_ref
+    cross = u[0] * v[1] - u[1] * v[0]
     assert abs(cross) < 1e-9, cross
 
 
